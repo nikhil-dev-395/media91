@@ -2,7 +2,7 @@
 
 ## Overview
 
-Media91 is a web application built using the MERN (MongoDB, Express.js, React, Node.js) stack, designed to provide users with a platform for sharing and viewing multimedia content, similar to YouTube. This README serves as a comprehensive guide to understanding, deploying, and contributing to the Media91 web app.
+Media91 is a web application built using the  (MongoDB, Express.js, htmll cs js, Node.js) stack, designed to provide users with a platform for sharing and viewing multimedia content, similar to YouTube. This README serves as a comprehensive guide to understanding, deploying, and contributing to the Media91 web app.
 
 ## Features
 
