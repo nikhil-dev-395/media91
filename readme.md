@@ -17,11 +17,11 @@ Media91 is a web application built using the MERN (MongoDB, Express.js, React, N
 
 - **MongoDB:** NoSQL database for storing user data, video information, and other relevant details.
 - **Express.js:** Web application framework for handling backend logic and routing.
-- **React:** Frontend library for building interactive user interfaces.
+- **html css js:** languages for building interactive user interfaces.
 - **Node.js:** JavaScript runtime for server-side development.
 - **JWT Authentication:** JSON Web Token-based authentication for secure user sessions.
 - **Cloudinary:** Cloud-based media management for storing and serving multimedia content.
-- **Redux:** State management library for efficient data flow within the application.
+
 - **Mongoose:** MongoDB object modeling for Node.js, providing a straightforward way to interact with the database.
 
 
