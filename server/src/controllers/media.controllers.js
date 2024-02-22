@@ -1,9 +1,9 @@
 import ThumbnailModel from "../models/thumbnail.models.js";
-import UserModel from "../models/user.models.js";
+// import UserModel from "../models/user.models.js";
 import VideoModel from "../models/video.models.js";
 import { cloudinary } from "../utils/cloudinary.js";
 
-// thumbnail upload section start from here ...
+// NOTE : thumbnail upload section start from here ...
 const ThumbnailUpload = async (req, res) => {
   try {
     let userID = req.params.userId;
@@ -16,21 +16,18 @@ const ThumbnailUpload = async (req, res) => {
     });
     res.status(200).send({ message: "thumbnail uploaded", thumbnailRecord });
   } catch (error) {
-    console.log(
-      "\n Error Occurred  at : media.controller | thumbnailUpload" + error
-    );
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
 
-// video uploading from here ...
+// NOTE: video uploading from here ...
 const VideoUpload = async (req, res) => {
   try {
     let { title, description } = req.body;
     // from here we will try find url for thumbnail
     let thumbnailId = req.params.id;
     const getThumbnail = await ThumbnailModel.findById(thumbnailId);
-    console.log("user >", getThumbnail.userId);
+    console.log("user >", getThumbnail.userId); //! remove this before production
 
     // we successfully got the thumbnail url from the database ...
     let file = req.file.path;
@@ -46,7 +43,7 @@ const VideoUpload = async (req, res) => {
       userId: getThumbnail.userId,
     });
 
-    console.log(videoRecord); // remove this before production
+    console.log(videoRecord); //! remove this before production
 
     res.status(200).send({
       success: true,
@@ -57,7 +54,13 @@ const VideoUpload = async (req, res) => {
     console.log(
       "Error Occurred  at : media.controller | VideoUpload" + error.message
     );
-    res.status(500).json({ success: false, message: "Internal Server Error" });
+    res
+      .status(500)
+      .json({
+        success: false,
+        message: "Internal Server Error",
+        Error: error.message,
+      });
   }
 };
 

@@ -14,7 +14,7 @@ const CreateComment = async (req, res) => {
     res
       .status(201)
       .json({ message: "Comment created successfully", commentUser });
-    console.log("\n\n Comment created successfully \n comment :-", commentUser); //remember to remove this console
+    console.log("\n\n Comment created successfully \n comment :-", commentUser); //!remember to remove this console
   } catch (error) {
     res
       .status(500)
@@ -25,6 +25,7 @@ const CreateComment = async (req, res) => {
     });
   }
 };
+//!! check before making any changes !! if any changes needed
 
 const getComment = async (req, res) => {
   try {
@@ -44,6 +45,8 @@ const getComment = async (req, res) => {
   }
 };
 
+//! remember to check this method also
+ 
 const postCommentOnVideo = async (req, res) => {
   res.send("hello");
 };

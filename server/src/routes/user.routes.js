@@ -5,6 +5,6 @@ import { SignUpUser, SignInUser } from "../controllers/user.controller.js";
 const router = express.Router();
 
 router.post("/signup", upload.single("avatar"), SignUpUser);
-router.post("/signin", SignInUser);
+router.get("/signin", SignInUser);
 
 export { router as userRouter };

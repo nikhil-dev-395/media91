@@ -13,10 +13,10 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
-app.use("/media", MediaRouter);
+app.use("/api/v1/media", MediaRouter);
 app.use("/api/v1/user", userRouter);
-app.use("/comment", CommentRouter);
-app.use("/subscribe", subscribeRouter);
+app.use("/api/v1/comment", CommentRouter);
+app.use("/api/v1/subscribe", subscribeRouter);
 
 // starting server from here ..
 const startServer = async () => {
