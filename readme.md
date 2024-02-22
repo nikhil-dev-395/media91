@@ -35,6 +35,6 @@ Media91 is a web application built using the  (MongoDB, Express.js, html css js,
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/nikhil-dev-395/media91
+git clone "https://github.com/nikhil-dev-395/media91"
 
 cd media91
