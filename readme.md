@@ -35,3 +35,7 @@ Media91 is a web application built using the MERN (MongoDB, Express.js, React, N
 
 1. Clone the repository:
 
+```bash
+git clone https://github.com/nikhil-dev-395/media91
+
+cd media91
