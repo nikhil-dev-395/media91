@@ -2,7 +2,11 @@
 
 ## Overview
 
+<<<<<<< HEAD
 Media91 is a web application built using the (MongoDB, Express.js, html css js , Node.js) stack, designed to provide users with a platform for sharing and viewing multimedia content, similar to YouTube. This README serves as a comprehensive guide to understanding, deploying, and contributing to the Media91 web app.
+=======
+Media91 is a web application built using the  (MongoDB, Express.js, html css js, Node.js) stack, designed to provide users with a platform for sharing and viewing multimedia content, similar to YouTube. This README serves as a comprehensive guide to understanding, deploying, and contributing to the Media91 web app.
+>>>>>>> 8cd08702e073de75a2c87d24acc9ca6590494d6c
 
 ## Features
 
@@ -37,6 +41,7 @@ Media91 is a web application built using the (MongoDB, Express.js, html css js ,
 git clone "https://github.com/nikhil-dev-395/media91"
 
 cd media91
+<<<<<<< HEAD
 ```
 
 # following are the apis we are using
@@ -55,3 +60,5 @@ cd media91
 
  - for signin user :"http://localhost:3000/api/v1/user/signin"
  ![alt text](image-4.png)
+=======
+>>>>>>> 8cd08702e073de75a2c87d24acc9ca6590494d6c
