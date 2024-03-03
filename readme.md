@@ -2,7 +2,7 @@
 
 ## Overview
 
-Media91 is a web application built using the MERN (MongoDB, Express.js, React, Node.js) stack, designed to provide users with a platform for sharing and viewing multimedia content, similar to YouTube. This README serves as a comprehensive guide to understanding, deploying, and contributing to the Media91 web app.
+Media91 is a web application built using the (MongoDB, Express.js, html css js , Node.js) stack, designed to provide users with a platform for sharing and viewing multimedia content, similar to YouTube. This README serves as a comprehensive guide to understanding, deploying, and contributing to the Media91 web app.
 
 ## Features
 
@@ -17,13 +17,11 @@ Media91 is a web application built using the MERN (MongoDB, Express.js, React, N
 
 - **MongoDB:** NoSQL database for storing user data, video information, and other relevant details.
 - **Express.js:** Web application framework for handling backend logic and routing.
-- **React:** Frontend library for building interactive user interfaces.
+- **html css js:** languages for building interactive user interfaces.
 - **Node.js:** JavaScript runtime for server-side development.
 - **JWT Authentication:** JSON Web Token-based authentication for secure user sessions.
 - **Cloudinary:** Cloud-based media management for storing and serving multimedia content.
-- **Redux:** State management library for efficient data flow within the application.
 - **Mongoose:** MongoDB object modeling for Node.js, providing a straightforward way to interact with the database.
-
 
 ## Prerequisites
 
@@ -36,6 +34,24 @@ Media91 is a web application built using the MERN (MongoDB, Express.js, React, N
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/nikhil-dev-395/media91
+git clone "https://github.com/nikhil-dev-395/media91"
 
 cd media91
+```
+
+# following are the apis we are using
+
+ - for registering user : "http://localhost:3000/api/v1/user/signup/"
+ ![alt text](image.png)
+
+ - for creating thumbnail :"http://localhost:3000/api/v1/media/thumbnail/:userId"
+ ![alt text](image-1.png)
+
+ for uploading video : "http://localhost:3000/api/v1/media/video/thumnailId"
+ ![alt text](image-2.png)
+
+ - for creating comment : "http://localhost:3000/api/v1/comment/createComment/userId"
+ ![alt text](image-3.png)
+
+ - for signin user :"http://localhost:3000/api/v1/user/signin"
+ ![alt text](image-4.png)
