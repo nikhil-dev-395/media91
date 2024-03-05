@@ -23,9 +23,8 @@ npm install
 npm start
 ```
 
-```
-note that :- all the frontend code will store in * client * folder
-```
+
+## note that :- all the frontend code will store in * client * folder
 
 ### following are the api`s used in server
 
