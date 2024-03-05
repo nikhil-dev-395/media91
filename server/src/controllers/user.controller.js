@@ -34,27 +34,6 @@ const SignUpUser = async (req, res) => {
 
 // as a name suggest this method is used for singing a user with the help of email and password
 
-// const SignInUser = async (req, res) => {
-//   try {
-//     const { email, password } = req.body;
-
-//     if (!email || !password) {
-//       return res
-//         .status(400)
-//         .json({ message: "Please provide email and password" });
-//     }
-
-//     const user = await UserModel.findOne({ email, password });
-//     if (!user) {
-//       return res.status(404).json({ message: "User not found" });
-//     }
-
-//     res.status(200).json({ message: "User logged in successfully", user });
-//     console.log(user);
-//   } catch (error) {
-//     res.status(500).json({ message: error.message });
-//   }
-// };
 
 const SignInUser = async (req, res) => {
   try {
