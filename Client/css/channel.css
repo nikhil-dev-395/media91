@@ -1,0 +1,89 @@
+/* Add this CSS to your channel.css file */
+
+/* Main container */
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left sidebar */
+aside {
+  width: 250px;
+ 
+  padding: 20px;
+  color: #fff; /* White text color */
+}
+
+/* Right section */
+.item-2 {
+  flex: 1;
+  padding: 20px;
+}
+
+button{
+  padding: 20px 40px;
+  border-radius: 10px;
+  background-color: rgb(214, 118, 118);
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+}
+
+/* Channel background image */
+.channel-Background {
+  width: 100%;
+  max-width: 1000px; /* Limit the width of the background image */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 20px;
+}
+
+/* Channel name */
+.channelName {
+  font-size: 24px;
+  margin-bottom: 10px;
+  /* background-color: pink; */
+}
+
+/* Description */
+details {
+  margin-bottom: 20px;
+}
+
+/* Subscriber count */
+.container-detail h2 {
+  margin-bottom: 20px;
+}
+
+/* Video container */
+.video-container {
+  margin-bottom: 20px;
+}
+
+/* Video title */
+.video-container h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* Video upload date */
+.video-container p {
+  font-size: 14px;
+  color: #7c7c7c; /* Gray color for upload date */
+  margin-bottom: 5px;
+}
+
+/* Video */
+.video {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 5px;
+}
+
+a{
+  text-decoration: none;
+}
+

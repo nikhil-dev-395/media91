@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Upload</title>
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/Sidebar.css" />
+    <link rel="stylesheet" href="../css/upload.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Upload Video</h2>
+      <label for="file">file </label>
+      <input type="file" id="videoInput" />
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" />
+      <label for="description">Description:</label>
+      <textarea id="description" name="description"></textarea>
+      <label for="category">Category:</label>
+      <input type="text" id="category" name="category" />
+      <button onclick="uploadVideo()">Upload</button>
+    </div>
+
+    <script>
+      async function uploadVideo() {
+        let params = new URLSearchParams(window.location.search);
+        let ThumbnailId = params.get("thumbnailId");
+
+        let avatar = localStorage.getItem("avatar");
+
+        const videoInput = document.getElementById("videoInput");
+        const file = videoInput.files[0];
+        const title = document.getElementById("title").value;
+        const description = document.getElementById("description").value;
+        const category = document.getElementById("category").value;
+
+        if (!file) {
+          alert("Please select a video file.");
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append("video", file);
+
+        // Append other form data
+        formData.append("title", title);
+        formData.append("description", description);
+        formData.append("channelId", localStorage.getItem("channelId")); // Get from local storage
+        formData.append("category", category);
+        formData.append("avatarUrl", avatar);
+        formData.append("userId", localStorage.getItem("userId")); // Get from local storage
+        formData.append("id", ThumbnailId); // Use the actual thumbnail ID
+
+        try {
+          const response = await fetch(
+            `http://localhost:3000/api/v1/media/video/${ThumbnailId}`,
+            {
+              method: "POST",
+              body: formData,
+            }
+          );
+
+          const data = await response.json();
+
+          if (response.ok) {
+            alert("Video uploaded successfully!");
+            window.location.href = "index.html";
+          } else {
+            alert("Failed to upload video. " + data.message); // Provide more specific error message if available
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert(
+            "An error occurred while uploading the video. Please try again later."
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

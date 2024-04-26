@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Search</title>
+    <style>
+      body {
+        display: flex;
+      }
+      img {
+        width: 400px;
+        height: 200px;
+      }
+      #searchResults {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .videoElem {
+        margin: 10px;
+      }
+
+      /*  */
+      /* Add some basic styling to the form */
+      #searchForm {
+    max-width: 600px;
+    /* margin: 0 auto; */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+
+      .left {
+        height: 100dvh;
+        background-color: #3e8e41;
+        position: sticky;
+        padding-top: 500px;
+        width: 230px; /* Adjust width as needed */
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      /* Style the label and input fields */
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      label,
+      input[type="text"] {
+        /* width: 100%; */
+        padding: 10px;
+        font-size: 16px;
+        /* border: 1px solid #ccc; */
+      }
+
+      button[type="submit"] {
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+
+      /* Add some basic styling to the h1 header */
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+      /*  */
+
+      /* side */
+      /* Style for the sidebar */
+      .sidebar {
+        padding-top: 500px;
+        width: 200px; /* Adjust width as needed */
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      /* Style for the shortcut links */
+      .shortcut-links {
+        margin-top: 100px;
+        list-style-type: none;
+        padding: 0;
+      }
+
+      /* Style for each shortcut item */
+      .shortcut-links a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #333;
+        text-decoration: none;
+        margin-bottom: 10px;
+        padding-top: 20px;
+      }
+
+      /*  */
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </head>
+  <body>
+    <section class="left">
+      <!-- Sidebar -->
+      <aside>
+        <div class="sidebar" style="font-size: 20px">
+          <div class="shortcut-links">
+            <br />
+            <a
+              href="index.html"
+              style="display: flex; align-items: center; gap: 10px"
+            >
+              <box-icon type="solid" name="home"></box-icon>
+              home
+            </a>
+
+            <a href="search.html">
+              <box-icon name="search"></box-icon>
+              search</a
+            >
+
+            <a href="thumbnail.html">
+              <box-icon name="upload"></box-icon>
+              upload video</a
+            >
+            <a href="displayChannel.html">
+            <box-icon name="videos" type="solid"></box-icon>
+            channel</a
+          >
+           
+            
+          </div>
+        </div>
+      </aside>
+    </section>
+    <!-- Sidebar end -->
+    <section class="right">
+      <h1>Video Search</h1>
+      <form id="searchForm">
+        <label for="searchInput">Search Title:</label>
+        <input type="text" id="searchInput" name="title" required />
+        <button type="submit">Search</button>
+      </form>
+
+      <div id="searchResults"></div>
+    </section>
+
+    <script>
+      console.log("search.js");
+
+      document
+        .getElementById("searchForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const searchTitle = document
+            .getElementById("searchInput")
+            .value.trim();
+
+          try {
+            const response = await fetch(
+              `http://localhost:3000/api/v1/search/videos?title=${encodeURIComponent(
+                searchTitle
+              )}`
+            );
+            if (!response.ok) {
+              throw new Error(`Failed to fetch videos: ${response.statusText}`);
+            }
+
+            const searchData = await response.json();
+            const searchResultsContainer =
+              document.getElementById("searchResults");
+
+            if (!searchData.success) {
+              searchResultsContainer.innerHTML = `<p>${searchData.message}</p>`;
+            } else {
+              searchResultsContainer.innerHTML = ""; // Clear previous results
+              if (searchData.videos.length === 0) {
+                searchResultsContainer.innerHTML = "<p>No videos found</p>";
+              } else {
+                searchData.videos.forEach((video) => {
+                  const videoElement = document.createElement("div");
+                  videoElement.classList = "videoElem";
+                  videoElement.innerHTML = `
+                                <h2>${video.title}</h2>
+                                <p>${video.description}</p>
+                               <a href="watch.html?videoId=${video._id}">
+            <img src="${video.thumbnail}" class="thumbnail" />
+        </a>
+                            `;
+                  searchResultsContainer.appendChild(videoElement);
+                });
+              }
+            }
+          } catch (error) {
+            console.error("Error searching for videos:", error);
+            const searchResultsContainer =
+              document.getElementById("searchResults");
+            searchResultsContainer.innerHTML =
+              "<p>An error occurred while searching for videos. Please try again later.</p>";
+          }
+        });
+    </script>
+  </body>
+</html>

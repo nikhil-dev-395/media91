@@ -1,0 +1,53 @@
+/* Styling for the upload form */
+#uploadForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#uploadForm input[type="file"] {
+  margin-bottom: 10px;
+}
+
+#uploadForm button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#uploadForm button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Styling for the video upload form */
+#video {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+#video input[type="file"] {
+  margin-bottom: 10px;
+}
+
+#video button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#video button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.thumbnail-details{
+  padding-top: 30px;
+}

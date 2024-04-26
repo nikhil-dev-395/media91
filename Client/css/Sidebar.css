@@ -1,0 +1,19 @@
+/*-------------sidebar------------------------------*/
+.sidebar{
+    background: rgb(255, 252, 252); 
+    width: 15%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    padding-left: 2%;
+    padding-top: 80px;
+    border-right: 1px solid black;
+   
+}
+
+.sidebar a{
+    gap: 20px;
+    display: flex;
+    margin-top: 30px;
+    color: black;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback</title>
+  
+
+  <link rel="stylesheet" href="../css/feedback.css">
+</head>
+<body>
+ 
+  <main>
+
+
+    <h1 style="text-align: center;">feedback</h1>
+
+    <section class="item1">
+        <aside class="sideBar">
+          <div>
+            <ul>
+              <li>home</li>
+              <li>search</li>
+              <li>channel</li>
+              <li>upload videos</li>
+              <li>feedback</li>
+            </ul>
+          </div>
+        </aside>
+      </section>
+
+
+    <section class="feedback">
+
+      
+
+      <form action="submit_feedback.php" method="POST">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Your Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Contact us at feedback@example.com</p>
+  </footer>
+</body>
+</html>

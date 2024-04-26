@@ -1,0 +1,150 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6; /* Improved readability */
+}
+
+/* Main container */
+main {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+/* Sidebar styles */
+aside {
+  width: 200px;
+  background-color: #f0f0f0;
+}
+
+.dateTime{
+margin-left: 40px;
+}
+/* Video container styles */
+.video-container {
+  max-width: 800px; /* Adjusted max-width for better responsiveness */
+  margin-left: 20px; /* Add some margin */
+}
+
+/* Heading styles */
+h1 {
+  color: #333;
+  margin-bottom: 20px; /* Add margin for better separation */
+}
+
+/* Button styles */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff; /* Improve button appearance */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+/* Anchor styles */
+a {
+  text-decoration: none;
+  color: #333; /* Darker color for better readability */
+}
+
+a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Avatar styles */
+.avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Channel details styles */
+.channel-details {
+  display: flex;
+  align-items: center;
+  margin-top: 10px; /* Adjusted margin */
+}
+
+/* Details styles */
+details {
+  margin-top: 20px;
+}
+
+/* Comments section styles */
+.comments-section {
+  margin-top: 20px;
+}
+
+textarea {
+  margin-bottom: 10px; /* Adjusted margin */
+}
+
+.comments-section ul li {
+  padding: 10px 0; /* Adjusted padding */
+  border-bottom: 1px solid #ccc; /* Separator between comments */
+}
+
+.comments-section ul li:last-child {
+  border-bottom: none; /* Remove border from last comment */
+}
+
+.comments-section ul li a {
+  color: #007bff; /* Change link color */
+}
+
+.comments-section ul li a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Suggested videos styles */
+.suggested-videos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px; /* Adjusted margin */
+  margin-left: 100px;
+}
+
+.vid-list {
+  border: 1px solid #ccc; /* Add border around video */
+  border-radius: 4px; /* Rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.video-thumbnail {
+  width: 300px;
+  height: auto;
+}
+
+.video-title {
+  font-size: 18px;
+  margin: 10px; /* Adjusted margin */
+}
+
+.channelName {
+  color: #333; /* Darker color */
+}
+
+.channelName:hover {
+  color: #007bff; /* Hover color */
+}
+
+
+aside{
+  margin-right: 200px;
+}

@@ -1,0 +1,26 @@
+/* Style for the sidebar */
+.sidebar {
+  padding-top: 500px;
+  width: 200px; /* Adjust width as needed */
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Style for the shortcut links */
+.shortcut-links {
+  margin-top: 100px;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style for each shortcut item */
+.shortcut-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding-top: 20px;
+}
+

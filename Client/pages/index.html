@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/navigation.css" />
+    <link rel="stylesheet" href="../css/Sidebar.css" />
+    <link rel="stylesheet" href="../css/main-section.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- or -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <title>index</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="flex-div">
+      <div class="nav-left flex-div">
+        <img src="../Logos/media91.png" class="logo" />
+      </div>
+      <div class="nav-right flex-div">
+        <a href="Login.html"><box-icon name="user" type="solid"></box-icon></a>
+      </div>
+    </nav>
+    <!-- Navigation Bar end -->
+
+    <!-- Sidebar -->
+    <aside>
+      <div class="sidebar" style="font-size: 20px">
+        <div class="shortcut-links">
+          <br />
+          <a
+            href="index.html"
+            style="display: flex; align-items: center; gap: 10px"
+          >
+            <box-icon type="solid" name="home"></box-icon>
+            home
+          </a>
+
+          <a href="search.html">
+            <box-icon name="search"></box-icon>
+            search</a
+          >
+
+          <a href="thumbnail.html">
+            <box-icon name="upload"></box-icon>
+            upload video</a
+          >
+          <a href="displayChannel.html">
+            <box-icon name="videos" type="solid"></box-icon>
+            channel</a
+          >
+        </div>
+      </div>
+    </aside>
+
+    <!-- Sidebar end -->
+
+    <!-- Main Content Container -->
+    <div class="container">
+      <div class="list-container myContent"></div>
+    </div>
+    <!-- Main Content Container end -->
+
+    <script src="../scripts/index.js"></script>
+
+    <!-- boxicons -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  </body>
+</html>

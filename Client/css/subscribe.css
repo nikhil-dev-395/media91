@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+    width: 1200px;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.channel-list {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 20px;
+}
+
+.channel {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.channel img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.channel-info {
+  padding: 20px;
+}
+
+.channel-info h2 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+}
+
+.channel-info p {
+  margin: 0 0 20px;
+}
+
+.subscribe-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: #555;
+}
